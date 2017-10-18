@@ -21,4 +21,5 @@ function verifier() {
         $resultat.innerHTML = "Moins";
     }
 }
+
 $bouton.onclick = verifier;
