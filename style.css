@@ -9,7 +9,7 @@ padding-left: 0.5em;
 }
 
 #resultat {
-    border: 1px #000 dashed;
+    border: 1px #000 solid;
     margin: 0 1em;
     line-height: 2em;
     padding-left: 0.5em;
