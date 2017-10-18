@@ -1,25 +1,22 @@
-$proposition = document.getElementById("proposition");
-$bouton = document.getElementById("bouton");
-$resultat = document.getElementById("resultat");
-reponse = Math.ceil(Math.random() * 100)
+var aleatoire = Math.floor(Math.random()*101);
+var msg = 'Choisis un chiffre entre 1 et 100';
 
-/*Constante permettant de gerer la valeur plus petite et grande possible, dans cet exemple minimum la valeur pourra prendre est 1
-et la plus grande 100*/
-const int MAX = 100, MIN = 1;
+    do {
+        
+    var essai = prompt(msg);
 
-/*Fonction permettant de vérifier la valeur entrée*/
-function verifier() {
-    if ($proposition.value > reponse) {
-        $resultat.innerHTML = "Plus";
-}
+    if (essai > aleatoire) {
+            msg = "Moins";
+        }
+    else if (essai < aleatoire) {
+            msg = "Plus";
+        }
+    else if (essai == aleatoire) {
+            msg = "Good Game, Well Played !";
+        }
 
-	if ($proposition.value == reponse) {
-        $resultat.innerHTML = "Tout Pile, Bravo, Félicitations !";
-}
+    else {
+            msg = "Game Over, Try Again !";
+        }
 
-	if ($proposition.value < reponse) {
-        $resultat.innerHTML = "Moins";
-    }
-}
-
-$bouton.onclick = verifier;
+    } while (essai);
